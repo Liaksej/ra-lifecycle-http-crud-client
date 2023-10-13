@@ -1,7 +1,8 @@
 import { IconButton, TextareaAutosize } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { Dispatch, FormEvent, useRef } from "react";
-import { Action, retrieveNotes } from "@/app/page";
+import { Action } from "@/app/page";
+import { retrieveNotes } from "@/utils/retrieveNotes";
 
 interface FormForNoteProps {
   dispatch: Dispatch<Action>;
