@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.form-button {
+  right: 0.25rem;
+  bottom: 0.55rem;
+}
+
+.cancel-button {
+  top: -1.25rem;
+  right: -1.25rem;
+}
