@@ -40,7 +40,7 @@ export const Note = ({ note, dispatch, service }: NoteProps) => {
   }
 
   return (
-    <div className="rel w-96 border-2">
+    <div className="rel w-96 border-2 h-fit">
       <IconButton
         className="abs cancel-button"
         aria-label="delete"
