@@ -30,7 +30,7 @@ function reducer(state: State, action: Action) {
   }
 }
 
-export function retriveNotes(dispatch: Dispatch<Action>) {
+export function retrieveNotes(dispatch: Dispatch<Action>) {
   fetch(SERVER_ENDPOINT)
     .then((res) => res.json())
     .then((data: Note[]) => {
@@ -51,7 +51,7 @@ export default function Home() {
   const [state, dispatch] = useReducer(reducer, { notes: [] });
 
   useEffect(() => {
-    retriveNotes(dispatch);
+    retrieveNotes(dispatch);
   }, []);
 
   return (

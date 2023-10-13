@@ -1,4 +1,4 @@
-import { Note as NoteType, Action, retriveNotes } from "@/app/page";
+import { Note as NoteType, Action, retrieveNotes } from "@/app/page";
 import { IconButton } from "@mui/material";
 import { Dispatch } from "react";
 import { Cancel } from "@mui/icons-material";
@@ -30,7 +30,7 @@ function deleteNote(
       console.log(res.statusText);
     })
     .then(() => {
-      retriveNotes(dispatch);
+      retrieveNotes(dispatch);
     });
 }
 

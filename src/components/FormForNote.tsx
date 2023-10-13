@@ -1,7 +1,7 @@
 import { IconButton, TextareaAutosize } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { Dispatch, FormEvent, useRef } from "react";
-import { Action, retriveNotes } from "@/app/page";
+import { Action, retrieveNotes } from "@/app/page";
 
 interface FormForNoteProps {
   dispatch: Dispatch<Action>;
@@ -27,7 +27,7 @@ function postNote(
       }
     })
     .then(() => {
-      retriveNotes(dispatch);
+      retrieveNotes(dispatch);
     });
 }
 
