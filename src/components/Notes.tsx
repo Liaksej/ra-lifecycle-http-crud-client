@@ -1,17 +1,33 @@
-import { ReactNode } from "react";
+import { Dispatch } from "react";
+import { Action, Note as NoteType } from "@/app/page";
+import { Note } from "@/components/Note";
 
 interface NotesProps {
-  children: ReactNode;
+  state: {
+    notes: NoteType[];
+  };
+  dispatch: Dispatch<Action>;
+  service: string;
 }
 
-export const Notes = ({ children }: NotesProps) => {
+const NOTES_NAME = "Notes";
+
+export const Notes = ({ state, dispatch, service }: NotesProps) => {
   return (
-    <>
-      <div>
-        <h1>{}</h1>
-        <div></div>
+    <div>
+      <h1>{NOTES_NAME}</h1>
+      <div className="w-7/8 mx-auto flex flex-wrap gap-6 justify-center">
+        {state.notes &&
+          state.notes.length > 0 &&
+          state.notes.map((note: NoteType) => (
+            <Note
+              key={note.id}
+              note={note}
+              dispatch={dispatch}
+              service={service}
+            />
+          ))}
       </div>
-      {children}
-    </>
+    </div>
   );
 };
