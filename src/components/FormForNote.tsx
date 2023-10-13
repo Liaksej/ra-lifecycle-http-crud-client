@@ -53,7 +53,7 @@ export const FormForNote = ({ dispatch, service }: FormForNoteProps) => {
 
   return (
     <form
-      className="w-fit mx-auto pt-16 relative"
+      className="w-96 mx-auto pt-16 relative"
       onSubmit={(e) => submitHandler(e, dispatch)}
     >
       <TextareaAutosize
@@ -63,7 +63,7 @@ export const FormForNote = ({ dispatch, service }: FormForNoteProps) => {
       />
       <IconButton
         size="small"
-        className="absolute right-1 bottom-2"
+        className="absolute right-[0.25rem] bottom-[0.55rem]"
         type="submit"
       >
         <SendIcon />

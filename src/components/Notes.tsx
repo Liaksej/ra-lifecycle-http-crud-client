@@ -17,7 +17,7 @@ const NOTES_NAME = "Notes";
 
 export const Notes = ({ state, dispatch, service }: NotesProps) => {
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="w-[75%] mx-auto">
       <div className="flex items-baseline pb-4">
         <h1 className="self-center">{NOTES_NAME}</h1>
         <IconButton

@@ -42,7 +42,7 @@ export const Note = ({ note, dispatch, service }: NoteProps) => {
   return (
     <div className="relative w-96 border-2">
       <IconButton
-        className="absolute -top-5 -right-5"
+        className="absolute top-[-1.25rem] right-[-1.25rem]"
         aria-label="delete"
         onClick={() => {
           deleteHandler();
