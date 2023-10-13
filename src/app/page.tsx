@@ -34,7 +34,6 @@ export function retrieveNotes(dispatch: Dispatch<Action>) {
   fetch(SERVER_ENDPOINT)
     .then((res) => res.json())
     .then((data: Note[]) => {
-      console.log(data);
       if (data) {
         dispatch({
           type: "RETRIEVE_NOTES",

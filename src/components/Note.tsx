@@ -27,7 +27,6 @@ function deleteNote(
       if (!res.ok) {
         throw new Error(res.statusText);
       }
-      console.log(res.statusText);
     })
     .then(() => {
       retrieveNotes(dispatch);

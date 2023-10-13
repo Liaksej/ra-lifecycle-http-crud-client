@@ -47,6 +47,7 @@ export const FormForNote = ({ dispatch, service }: FormForNoteProps) => {
     postNote(service, contentRef.current.value, dispatch);
 
     contentRef.current.value = "";
+    contentRef.current.focus();
   }
 
   return (
