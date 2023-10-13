@@ -50,7 +50,7 @@ export const Note = ({ note, dispatch, service }: NoteProps) => {
       >
         <Cancel color="disabled" />
       </IconButton>
-      <div className="break-words p-2">{note.content}</div>
+      <div className="break-words">{note.content}</div>
     </div>
   );
 };
