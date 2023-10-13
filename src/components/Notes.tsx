@@ -1,8 +1,9 @@
 import { Dispatch } from "react";
-import { Action, Note as NoteType, retrieveNotes } from "@/app/page";
+import { Action, Note as NoteType } from "@/app/page";
 import { Note } from "@/components/Note";
 import { Refresh } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
+import { retrieveNotes } from "@/utils/retrieveNotes";
 
 interface NotesProps {
   state: {

@@ -1,7 +1,8 @@
-import { Note as NoteType, Action, retrieveNotes } from "@/app/page";
+import { Note as NoteType, Action } from "@/app/page";
 import { IconButton } from "@mui/material";
 import { Dispatch } from "react";
 import { Cancel } from "@mui/icons-material";
+import { retrieveNotes } from "@/utils/retrieveNotes";
 
 interface NoteProps {
   note: NoteType;

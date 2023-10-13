@@ -3,6 +3,7 @@
 import { Notes } from "@/components/Notes";
 import { FormForNote } from "@/components/FormForNote";
 import { Dispatch, useEffect, useReducer } from "react";
+import { retrieveNotes, SERVER_ENDPOINT } from "@/utils/retrieveNotes";
 
 export type Note = {
   id?: string;
@@ -18,9 +19,6 @@ export type Action = {
   payload: Note[];
 };
 
-const SERVER_ENDPOINT =
-  "https://ra-lifecycle-http-crud-server.vercel.app/notes";
-
 function reducer(state: State, action: Action) {
   switch (action.type) {
     case "RETRIEVE_NOTES":
@@ -28,22 +26,6 @@ function reducer(state: State, action: Action) {
     default:
       return state;
   }
-}
-
-export function retrieveNotes(dispatch: Dispatch<Action>) {
-  fetch(SERVER_ENDPOINT)
-    .then((res) => res.json())
-    .then((data: Note[]) => {
-      if (data) {
-        dispatch({
-          type: "RETRIEVE_NOTES",
-          payload: data,
-        });
-      }
-    })
-    .catch((err) => {
-      throw new Error(err);
-    });
 }
 
 export default function Home() {
